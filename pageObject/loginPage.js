@@ -13,10 +13,8 @@ class LoginPage extends Page {
         await this.loginBtn.click();
     }
 
-    async openSite() {
-        await browser.url(
-          "https://www.saucedemo.com/"
-        );
+    async opener() {
+        await super.open(" ");
     }
 }
 

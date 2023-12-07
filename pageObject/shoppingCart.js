@@ -2,12 +2,13 @@ const Page = require("./page");
 
 class ShoppingCart extends Page {
 
-    get removeBackpackBtn(){
-        return $("#remove-sauce-labs-backpack");
+    get removeBtns(){
+        return $$("[id^='remove-sauce-labs']");
     }
 
-    
-
+     async opener() {
+        await super.open("cart.html");
+    }
 
 }
 
