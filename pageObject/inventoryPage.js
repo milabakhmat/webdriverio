@@ -13,6 +13,8 @@ class InventoryPage extends Page {
     return $$("[id^='add-to-cart-sauce-labs']");
   }
 
+  //allBtns = $$("[id^='add-to-cart-sauce-labs']"); for Playwright
+
   get removeBtns() {
     return $("[id^='remove-sauce-labs']");
   }
@@ -29,12 +31,12 @@ class InventoryPage extends Page {
     return $(".shopping_cart_link");
   }
 
-  async opener() {
-    await super.open("inventory.html");
+  open() {
+    super.open("inventory.html");
   }
 
-  async selectItem() {
-    await this.allBtns[0].click();
+  async selectItem(index) {
+    await this.allBtns[index].click();
   }
   async openCart() {
     await this.cartBtn.click();

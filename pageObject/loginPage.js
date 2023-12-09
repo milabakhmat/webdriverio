@@ -13,8 +13,8 @@ class LoginPage extends Page {
         await this.loginBtn.click();
     }
 
-    async opener() {
-        await super.open(" ");
+    open() {
+        super.open(" ");
     }
 }
 
