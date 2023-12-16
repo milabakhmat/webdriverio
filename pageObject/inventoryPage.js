@@ -9,8 +9,14 @@ class InventoryPage extends Page {
     return $$(".inventory_item");
   }
 
-  get removeBackpackBtn() {
-    return $("#remove-sauce-labs-backpack");
+  get allBtns() {
+    return $$("[id^='add-to-cart-sauce-labs']");
+  }
+
+  //allBtns = $$("[id^='add-to-cart-sauce-labs']"); for Playwright
+
+  get removeBtns() {
+    return $("[id^='remove-sauce-labs']");
   }
 
   get shoppingCart() {
@@ -18,19 +24,22 @@ class InventoryPage extends Page {
   }
 
   get shoppingCartBadge() {
-    return $("//span[@class='shopping_cart_badge'][text()=1]");
+    return $(".shopping_cart_badge");
   }
 
-  async openInventory() {
-    await browser.url("https://www.saucedemo.com/inventory.html");
+  get cartBtn() {
+    return $(".shopping_cart_link");
   }
 
-  async selectBackpack() {
-    await $("#add-to-cart-sauce-labs-backpack").click();
+  open() {
+    super.open("inventory.html");
   }
 
+  async selectItem(index) {
+    await this.allBtns[index].click();
+  }
   async openCart() {
-    await $(".shopping_cart_link").click();
+    await this.cartBtn.click();
   }
 }
 
