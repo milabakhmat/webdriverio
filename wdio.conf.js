@@ -21,7 +21,7 @@ exports.config = {
   // then the current working directory is where your `package.json` resides, so `wdio`
   // will be called from there.
   //one file
-  specs: ["./test/specs/*.spec.js"],
+  specs: ["./test/specs/suite2.spec.js"],
   //folder with tests
   //specs: ["./test/specs/*.js"],
   // Patterns to exclude.
@@ -150,6 +150,8 @@ exports.config = {
   // The only one supported by default is 'dot'
   // see also: https://webdriver.io/docs/dot-reporter
   reporters: ["spec", "html-nice"],
+
+ 
 
   // Mocha configuration, see:
   //  https://serenity-js.org/api/mocha-adapter/interface/MochaConfig/

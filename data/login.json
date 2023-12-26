@@ -2,5 +2,10 @@
   "valid": {
     "userName": "standard_user",
     "password": "secret_sauce"
+  },
+  "senderData": {
+    "firstName": "Mila",
+    "lastName": "Bakhmat",
+    "zip": "63421"
   }
 }
