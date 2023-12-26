@@ -1,6 +1,6 @@
 const Page = require("./page");
 
-class ShoppingCart extends Page {
+class CheckoutStep2 extends Page {
   get itemsInCartTitles() {
     return $$(".inventory_item_name");
   }
@@ -27,31 +27,6 @@ class ShoppingCart extends Page {
   get arrayOfDescr() {
     return this.itemsInCartDesc.map((e) => e.getText());
   }
-
-  get checkout() {
-    return $("button[data-test='checkout']");
-  }
-
-  get removeBtns() {
-    return $$("[id^='remove-']");
-  }
-
-  get removeBtn() {
-    return $("[id^='remove-']");
-  }
-
-  get removedItem() {
-    return $(".removed_cart_item");
-  }
-
-  get numberOfDivsInEmptyCart() {
-    return $$(".cart_list>div");
-  }
-
-  open() {
-    super.open("cart.html");
-  }
 }
 
-
-module.exports = new ShoppingCart();
+module.exports = new CheckoutStep2();
